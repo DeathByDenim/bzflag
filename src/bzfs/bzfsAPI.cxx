@@ -4151,6 +4151,16 @@ BZF_API bz_ApiString bz_filterPath ( const char* path )
     return ret;
 }
 
+BZF_API bool bz_isReplayServer()
+{
+    return clOptions->replayServer;
+}
+
+BZF_API const char* bz_getRecordingDirectory()
+{
+    return Record::getDirectory();
+}
+
 BZF_API bool bz_saveRecBuf( const char * _filename, int seconds )
 {
     if (!Record::enabled() || !_filename)

@@ -2132,6 +2132,10 @@ BZF_API bool bz_removeClipFieldNotifier ( const char *name, bz_ClipFieldNotifier
 // path checks
 BZF_API bz_ApiString bz_filterPath ( const char* path );
 
+// Replay server
+BZF_API bool bz_isReplayServer();
+BZF_API const char* bz_getRecordingDirectory();
+
 // Record-Replay
 BZF_API bool bz_saveRecBuf( const char * _filename, int seconds  = 0);
 BZF_API bool bz_startRecBuf( void );
